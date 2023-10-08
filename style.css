@@ -670,12 +670,14 @@ overflow: hidden;
        gap: 50px;
         
     }
+    
+ 
     #page3>button{
-       
+       width: 90%;
         font-weight: 600;
         background-color: white;
         
-        font-size: 10px;
+        font-size: 15px;
     }
     #center-page4{
         font-size: 5vw;
@@ -688,47 +690,48 @@ overflow: hidden;
     }
     #right5>h3{
         font-size: 2.3vw;
+       
       
     }
     #right5>button{
       
         font-weight: 500;
        
-        font-size: 2vw;
+        font-size: 2.4vw;
         margin-top: 5vw;
     }
     #page6>h3{
         margin-bottom: 1vw ;
-        font-size:2.5vw;
+        font-size:4vw;
     
     }
     
     #page6>p{
-        font-size: 2.6vw;
+        font-size: 2.7vw;
     
     }
     #page8>h1{
-        font-size: 2.4vw;
+        font-size: 2.8vw;
         width: 30%;
     }
     #page9>h1{
-        font-size: 2.2vw;
+        font-size: 2.8vw;
         width: 30%;
     }
     #page10>h1{
-        font-size: 2.2vw;
+        font-size: 2.8vw;
         width: 30%;
     }
     #page11>h1{
-        font-size: 2.2vw;
+        font-size: 2.8vw;
         width: 30%;
     }
     #page12>h1{
-        font-size: 2.2vw;
+        font-size: 2.8vw;
         width: 30%;
     }
     #page13>h1{
-        font-size: 2.4vw;
+        font-size: 2.8vw;
         width: 30%;
     }
     #page16>h2{
@@ -746,27 +749,32 @@ overflow: hidden;
     }
     #page16>button{
         bottom: 5%;
-        font-size: 2vw;
+        font-size: 2.3vw;
        
     }
     #page17>h4{
-        font-size: 4vw;
+        font-size: 5vw;
         font-weight: 500;
         margin-bottom: 2vw;
         
     }
    
     #page17>p{
-        font-size: 2.7vw;
+        font-size: 3vw;
+        width: 100%;
        
     }
     #page18{
         display: none;
         visibility: hidden ;
     }
+    #page19>h1{
+        font-size: 4vw;
+        margin-bottom: 5px
+    }
     #page19>h5{
-        width: 55%;
-        font-size: 2.5vw;
+        width: 80%;
+        font-size: 3vw;
         font-weight: 400;
     }
     #center-page20{
@@ -781,13 +789,13 @@ overflow: hidden;
     }
     #center-page20>h1{
         margin-bottom: 5vw;
-        font-size: 3.5vw;
+        font-size: 4vw;
 
     }
     #center-page20>p{
         width:100%;
         display: flex;
-        font-size: 3vw;
+        font-size: 3.2vw;
     }
     #page21>#troff{
         width: 80%;
@@ -814,4 +822,5 @@ overflow: hidden;
         width: 100vw;
         background-color: #000;
     }
+
 }
