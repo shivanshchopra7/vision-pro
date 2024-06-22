@@ -454,10 +454,12 @@ overflow: hidden;
 }
 #page16>h2{
     position: absolute;
-    width: 50%;
+    width: 80%;
+    font-size: x-large;
+    text-align: center;
     color: #434343 ;
     font-weight: 500;
-    top: 5%;
+    top: 0%;
 
 }
 #page16>h2>span{
@@ -465,7 +467,7 @@ overflow: hidden;
     
 }
 #page16>img{
-    width: 60%;
+    width: 55%;
     position: absolute;
     bottom: 0%;
 }
@@ -661,13 +663,14 @@ overflow: hidden;
         position: absolute;
         bottom: 0%;
         height: 60%;
-        
+        width: 100%;
+        text-wrap: nowrap;
         display: flex;
    align-items: flex-start;
-        justify-content: space-evenly;
-        padding: 90px 60px;
-       
-       gap: 50px;
+        justify-content: center;
+        padding: 0px 60px;
+       font-size: small;
+       gap: 20px;
         
     }
     
@@ -710,33 +713,33 @@ overflow: hidden;
         font-size: 2.7vw;
     
     }
-    #page8>h1{
-        font-size: 2.8vw;
-        width: 30%;
+
+   #page7, #page8, #page9, #page10, #page11, #page12, #page13{
+        display: none;
+     visibility: hidden;
     }
-    #page9>h1{
-        font-size: 2.8vw;
-        width: 30%;
+ 
+    #page14{
+        flex-direction: column;
+        gap:20px;
+        padding: 20px;
+
     }
-    #page10>h1{
-        font-size: 2.8vw;
-        width: 30%;
+    .left14{
+        height: 100%;
+        width: 100%;
+    
+        background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_top__k3b8lzqd1l2m_large.jpg);
+        background-size: cover;
     }
-    #page11>h1{
-        font-size: 2.8vw;
-        width: 30%;
-    }
-    #page12>h1{
-        font-size: 2.8vw;
-        width: 30%;
-    }
-    #page13>h1{
-        font-size: 2.8vw;
-        width: 30%;
+    .right14{
+        height: 100%;
+        width: 100%;
+        
     }
     #page16>h2{
         position: absolute;
-        
+        font-size: larger;
         color: #434343 ;
         font-weight: 500;
         top: 10%;
@@ -745,7 +748,8 @@ overflow: hidden;
     
     }
     #page16>img{
-        width: 80%;
+        width: 100%;
+    
     }
     #page16>button{
         bottom: 5%;
