@@ -11,7 +11,7 @@
 <body>
     <main id="main">
         <section id="page">
-            <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/hero/large_2x.mp4" muted></video>
+            <video data-src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/hero/large_2x.mp4" muted></video>
             <nav>
                 <h3>Vision Pro</h3>
                 <button>Notify Me</button>
@@ -24,12 +24,12 @@
 
         <section id="page1">
             <h1>Welcome to the era of spatial computing</h1>
-            <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-spatial-computing/large.mp4" autoplay loop muted></video>
+            <video data-src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-spatial-computing/large.mp4" autoplay loop muted></video>
         </section>
 
         <section id="page2">
             <h1>Apple Vision Pro seamlessly blends <br> digital content with your physical space.</h1>
-            <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-digital-canvas/large.mp4" autoplay loop muted></video>
+            <video data-src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-digital-canvas/large.mp4" autoplay loop muted></video>
         </section>
 
         <section id="page3">
@@ -49,7 +49,7 @@
                 <h5>Apps</h5>
                 <h1>Free your desktop.<br> And your app will follow.</h1>
             </div>
-            <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/visionos/large.mp4" autoplay loop muted></video>
+            <video data-src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/visionos/large.mp4" autoplay loop muted></video>
         </section>
 
         <section id="page5">
@@ -104,7 +104,7 @@
 
         <section id="page15">
             <div id="center-page15">
-                <video src="https://www.apple.com//105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/glass/large_2x.mp4" autoplay loop muted></video>
+                <video data-src="https://www.apple.com//105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/glass/large_2x.mp4" autoplay loop muted></video>
             </div>
         </section>
 
@@ -130,7 +130,7 @@
         </section>
 
         <section id="page20">
-            <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/spatial-audio/large.mp4" autoplay loop muted></video>
+            <video data-src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/spatial-audio/large.mp4" autoplay loop muted></video>
             <div id="center-page20">
                 <h1>Our most advanced <br> Spatial Audio system ever.</h1>
                 <p>Dual-driver audio pods positioned next to each ear deliver personalized sound while letting you hear what’s around you. Ambient Spatial Audio makes sounds feel like they’re coming from your surroundings. And with audio raytracing, Vision Pro analyzes your room’s acoustic properties — including the physical materials — to adapt and match sound to your space.</p>
@@ -145,8 +145,8 @@
         </section>
 
         <section id="page22">
-            <img id="snroff" src="https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_off__cfzcmow4c3f6_large.jpg" alt="Sensors Off">
-            <img id="snron" src="https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_all__dp0a8e4y4u4i_large.jpg" alt="Sensors On">
+            <img id="snroff" data-src="https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_off__cfzcmow4c3f6_large.jpg" alt="Sensors Off">
+            <img id="snron" data-src="https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_all__dp0a8e4y4u4i_large.jpg" alt="Sensors On">
         </section>
 
         <section id="page23">
@@ -158,5 +158,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video[data-src]');
+    
+            const loadVideo = (video) => {
+                video.setAttribute('src', video.getAttribute('data-src'));
+                video.removeAttribute('data-src');
+            };
+    
+            const onIntersection = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadVideo(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+    
+            const observer = new IntersectionObserver(onIntersection, {
+                rootMargin: '0px 0px 200px 0px'
+            });
+    
+            videos.forEach(video => {
+                observer.observe(video);
+            });
+        });
+        </script>
 </body>
 </html>
